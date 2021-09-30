@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352865745194",
+    "project_id": "dating-app-bloc",
+    "storage_bucket": "dating-app-bloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352865745194:android:784fbc26e8b2dede150653",
+        "android_client_info": {
+          "package_name": "com.example.dating_app_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352865745194-7dd1vf53rit4cbs6v0mg47p7udfaacva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3khduZrKgZKlgW-KsZ1mD1Of5rP9Nuok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352865745194-7dd1vf53rit4cbs6v0mg47p7udfaacva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

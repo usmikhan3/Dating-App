@@ -1,4 +1,4 @@
-import 'package:dating_app_bloc/screens/onBoarding/widgets/custom_text_container.dart';
+import 'package:dating_app_bloc/widgets/custom_text_container.dart';
 import 'package:dating_app_bloc/screens/onBoarding/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -13,6 +13,7 @@ class BioGraphy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bioController = TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child: Column(
@@ -28,6 +29,7 @@ class BioGraphy extends StatelessWidget {
               CustomTextField(
                 tabController: tabController,
                 text: 'ENTER YOUR BIO',
+                controller: bioController,
               ),
               SizedBox(
                 height: 100,
@@ -93,7 +95,10 @@ class BioGraphy extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              CustomButton(tabController: tabController)
+              CustomButton(
+                tabController: tabController,
+                text: "NEXT STEP",
+              )
             ],
           ),
         ],

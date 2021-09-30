@@ -54,7 +54,10 @@ class Pictures extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              CustomButton(tabController: tabController)
+              CustomButton(
+                tabController: tabController,
+                text: "NEXT STEP",
+              )
             ],
           ),
         ],

@@ -12,6 +12,8 @@ class Demo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ageController = TextEditingController();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child: Column(
@@ -36,6 +38,7 @@ class Demo extends StatelessWidget {
               CustomTextField(
                 tabController: tabController,
                 text: 'ENTER YOUR AGE',
+                controller: ageController,
               ),
             ],
           ),
@@ -50,7 +53,10 @@ class Demo extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              CustomButton(tabController: tabController)
+              CustomButton(
+                tabController: tabController,
+                text: "NEXT STEP",
+              )
             ],
           ),
         ],

@@ -44,7 +44,7 @@ class Message extends Equatable {
       timeString: DateFormat('jm').format(DateTime.now()),
     ),
     Message(
-      id: 3,
+      id: 4,
       senderId: 2,
       receiverId: 1,
       message: "Where are you rn?",

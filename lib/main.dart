@@ -2,11 +2,14 @@ import 'package:dating_app_bloc/bloc/swipe/swipe_bloc.dart';
 import 'package:dating_app_bloc/config/app_router.dart';
 import 'package:dating_app_bloc/config/theme.dart';
 import 'package:dating_app_bloc/models/model.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:dating_app_bloc/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

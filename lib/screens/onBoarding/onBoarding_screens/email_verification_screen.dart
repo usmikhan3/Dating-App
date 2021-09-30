@@ -12,6 +12,7 @@ class EmailVerificaion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final verficationController = TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       child: Column(
@@ -26,6 +27,7 @@ class EmailVerificaion extends StatelessWidget {
               CustomTextField(
                 tabController: tabController,
                 text: 'ENTER YOUR CODE',
+                controller: verficationController,
               ),
             ],
           ),
@@ -40,7 +42,10 @@ class EmailVerificaion extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              CustomButton(tabController: tabController)
+              CustomButton(
+                tabController: tabController,
+                text: "NEXT STEP",
+              )
             ],
           ),
         ],

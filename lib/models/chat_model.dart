@@ -5,13 +5,13 @@ class Chat extends Equatable {
   final int id;
   final int userId;
   final int matchedUserId;
-  final List<Message> message;
+  final List<Message> messages;
 
   const Chat({
     required this.id,
     required this.userId,
     required this.matchedUserId,
-    required this.message,
+    required this.messages,
   });
 
   static List<Chat> chats = [
@@ -19,11 +19,11 @@ class Chat extends Equatable {
       id: 1,
       userId: 1,
       matchedUserId: 2,
-      message: Message.mesages
+      messages: Message.mesages
           .where(
             (message) =>
                 (message.senderId == 1 && message.receiverId == 2) ||
-                (message.senderId == 1 && message.receiverId == 1),
+                (message.senderId == 2 && message.receiverId == 1),
           )
           .toList(),
     ),
@@ -31,7 +31,7 @@ class Chat extends Equatable {
       id: 2,
       userId: 1,
       matchedUserId: 3,
-      message: Message.mesages
+      messages: Message.mesages
           .where(
             (message) =>
                 (message.senderId == 1 && message.receiverId == 3) ||
@@ -43,7 +43,7 @@ class Chat extends Equatable {
       id: 3,
       userId: 1,
       matchedUserId: 5,
-      message: Message.mesages
+      messages: Message.mesages
           .where(
             (message) =>
                 (message.senderId == 1 && message.receiverId == 5) ||
@@ -55,7 +55,7 @@ class Chat extends Equatable {
       id: 4,
       userId: 1,
       matchedUserId: 6,
-      message: Message.mesages
+      messages: Message.mesages
           .where(
             (message) =>
                 (message.senderId == 1 && message.receiverId == 6) ||
@@ -70,6 +70,6 @@ class Chat extends Equatable {
         id,
         userId,
         matchedUserId,
-        message,
+        messages,
       ];
 }
